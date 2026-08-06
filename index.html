@@ -7,22 +7,20 @@
 </head>
 <body>
     <div id="root">
-        <h1>Hello World</h1>
+
+
     </div>
 
     <script>
         const heading = document.createElement("h1");
+        const para = document.createElement("p");
 
-        // putting heading text inside the h1 tag
-
-        heading.innerHTML = "Hello World!! from javaScript";
-
-
-        // i need to put this heading inside the div whose id = "root"..
-        // whre is my root..???
         const root = document.getElementById("root");
 
+        heading.innerHTML = "hyy there i am from Java script!!!!!!!";
+        para.innerHTML = "i am para.. have a look";
         root.appendChild(heading);
+        root.appendChild(para);
     </script>
 </body>
 </html>
