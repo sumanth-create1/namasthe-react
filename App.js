@@ -8,7 +8,8 @@
 
 const parent = React.createElement("div" , {id:"parent"}, 
     React.createElement("div", {id:"child"}, 
-        React.createElement("h1", {} , "I am an H1 tag"),
+       [ React.createElement("h1", {} , "I am an H1 tag"),
+         React.createElement("h1", {} , "this i an another h1 (sibling of upper h1)")]
     )
 );
 
