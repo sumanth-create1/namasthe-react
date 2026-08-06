@@ -8,18 +8,6 @@
   <body>
     <div id="root"></div>
 
-    <script>
-      const heading = document.createElement("h1");
-      const para = document.createElement("p");
-
-      const root = document.getElementById("root");
-
-      heading.innerHTML = "hyy there i am from Java script!!!!!!!";
-      para.innerHTML = "i am para.. have a look";
-      root.appendChild(heading);
-      root.appendChild(para);
-    </script>
-
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -28,5 +16,20 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
+
+    <script>
+        const heading = React.createElement("h1" , {} , "Hello World from React!!");
+
+        const para = React.createElement("h2", {} , "heyy i am heading2 from REact??");
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+        
+
+
+    </script>
+
+    
   </body>
 </html>
