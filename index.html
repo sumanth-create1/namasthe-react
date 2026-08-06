@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NamastheReact</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World</h1>
+    </div>
+
+    <script>
+        const heading = document.createElement("h1");
+
+        // putting heading text inside the h1 tag
+
+        heading.innerHTML = "Hello World!! from javaScript";
+
+
+        // i need to put this heading inside the div whose id = "root"..
+        // whre is my root..???
+        const root = document.getElementById("root");
+
+        root.appendChild(heading);
+    </script>
+</body>
+</html>
