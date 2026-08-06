@@ -1,26 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NamastheReact</title>
-</head>
-<body>
-    <div id="root">
-
-
-    </div>
+  </head>
+  <body>
+    <div id="root"></div>
 
     <script>
-        const heading = document.createElement("h1");
-        const para = document.createElement("p");
+      const heading = document.createElement("h1");
+      const para = document.createElement("p");
 
-        const root = document.getElementById("root");
+      const root = document.getElementById("root");
 
-        heading.innerHTML = "hyy there i am from Java script!!!!!!!";
-        para.innerHTML = "i am para.. have a look";
-        root.appendChild(heading);
-        root.appendChild(para);
+      heading.innerHTML = "hyy there i am from Java script!!!!!!!";
+      para.innerHTML = "i am para.. have a look";
+      root.appendChild(heading);
+      root.appendChild(para);
     </script>
-</body>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </body>
 </html>
