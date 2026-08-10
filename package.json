@@ -2,12 +2,7 @@
   "name": "namasthereact",
   "version": "1.0.0",
   "description": "this is my frontend project",
-  "keywords": [
-    "react",
-    "satya",
-    "sumanth",
-    "react-js"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/sumanth-create1/namasthe-react#readme",
   "bugs": {
     "url": "https://github.com/sumanth-create1/namasthe-react/issues"
@@ -22,5 +17,8 @@
   "main": "App.js",
   "scripts": {
     "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
   }
 }
