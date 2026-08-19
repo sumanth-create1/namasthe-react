@@ -1,27 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// this is a REACT element
-const heading = <h1 className="root">this is a react Element</h1>;
+if (module.hot) {
+  module.hot.dispose(function (data) {
+    // module is about to be replaced.
+    // You can save data that should be accessible to the new asset in `data`
+    data.updated = Date.now();
+  });
 
-// REACT Functional Component
+  module.hot.accept(function (getParents) {
+    // module or one of its dependencies was just updated.
+    // data stored in `dispose` is available in `module.hot.data`
+    let { updated } = module.hot.data;
+  });
+}
 
 
-const Title = () => (
-    <h1>
-        React Component
-    </h1>
-);
-
-const HeadingComponent = () => (
-    
-  <div id="container">
-    <Title />
-    <h1>hyy Anitha !!</h1>
-    <h1>from functional component</h1>
-  </div>
-);
+const title = <h1>this is a react element</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+
+root.render(title);
