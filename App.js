@@ -1,24 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-if (module.hot) {
-  module.hot.dispose(function (data) {
-    // module is about to be replaced.
-    // You can save data that should be accessible to the new asset in `data`
-    data.updated = Date.now();
-  });
+const Title = () => (
+  <div id="container">
+    <h1 id="myH1">THE TOPIC IS REACT</h1>
+    <SubTitle />
+    <Part1 />
+  </div>
+);
 
-  module.hot.accept(function (getParents) {
-    // module or one of its dependencies was just updated.
-    // data stored in `dispose` is available in `module.hot.data`
-    let { updated } = module.hot.data;
-  });
-}
+const SubTitle = () => (
+  <h2>
+    Author:<p>~satyasumanth</p>
+  </h2>
+);
+
+const Part1 = () => {
+  return <div>
+    <h3>PART 1</h3>
+    <p>
+       I made some stuff one react js from what i have learned so that which makes me more intrested in learning react.
+    </p>
 
 
-const title = <h1>this is a react element</h1>;
+    <h3>PART 2</h3>
+    <p>
+       i have learned about the component composition , what does it mean means ???
+       let's see it 
+
+       placing one component inside the other. is known as componenet composition.
+    </p>
+  </div>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-root.render(title);
+root.render(<Title />);
