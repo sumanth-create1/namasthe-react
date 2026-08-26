@@ -1,38 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Title = () => (
-  <div id="container">
-    <h1 id="myH1">THE TOPIC IS REACT</h1>
-    <SubTitle />
-    <Part1 />
-  </div>
-);
 
-const SubTitle = () => (
-  <h2>
-    Author:<p>~satyasumanth</p>
-  </h2>
-);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbWBALXabwRvoCQ4_GFkRjs7jg-K0LDyNSLvH8DZUDw&s=10" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Profile</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
 
-const Part1 = () => {
-  return <div>
-    <h3>PART 1</h3>
-    <p>
-       I made some stuff one react js from what i have learned so that which makes me more intrested in learning react.
-    </p>
+const App = () => {
+  return (
+    <div className="app">
+      <Header />
 
-
-    <h3>PART 2</h3>
-    <p>
-       i have learned about the component composition , what does it mean means ???
-       let's see it 
-
-       placing one component inside the other. is known as componenet composition.
-    </p>
-  </div>;
-};
+    </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Title />);
+root.render(<App />);
