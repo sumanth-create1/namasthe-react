@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbWBALXabwRvoCQ4_GFkRjs7jg-K0LDyNSLvH8DZUDw&s=10" />
+        <h1 id="mainIcon"><i><b>FoodSite</b></i></h1>
       </div>
       <div className="nav-items">
         <ul>
@@ -20,7 +20,7 @@ const Header = () => {
   )
 }
 
-const App = () => {
+const AppLayout = () => {
   return (
     <div className="app">
       <Header />
@@ -31,4 +31,4 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<App />);
+root.render(<AppLayout />);
