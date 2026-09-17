@@ -1,24 +1,51 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+const Navbar = () => {
+  return (
+    <div className="navbar">
+      <div className="nav-logo">Foodicide</div>
+
+      {/* Search container */}
+
+      <div className="search-container">
+        {/* Location */}
+
+        <div className="location-box">
+          <span className="location-icon">📍</span>
+          <span className="location-text">Nellore</span>
+          <span className="arrow">▼</span>
+        </div>
+
+        {/* Divider */}
+
+        <div className="divider"></div>
+
+        {/* Search */}
+
+        <div className="search-box">
+          <span className="search-icon">⌕</span>
+
+          <input
+            type="text"
+            placeholder="Search for restaurant, cuisine or a dish"
+          />
+        </div>
+      </div>
+
+      <div className="auth-links">
+        <a href="#">Log In</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </div>
+  );
+};
+
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToRDT1WsNEwjFGAAcO1lFpQs66pjhkJ5T0PRtI0-4KWg&s=10"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Log In</li>
-          <li>SignIn</li>
-        </ul>
-      </div>
+      <Navbar />
+
     </div>
   );
 };
@@ -54,7 +81,6 @@ const RestaurantCard = (props) => {
 const Body = () => {
   return (
     <div className="body">
-      <div className="search">Search</div>
       <div className="res-container">
         <RestaurantCard
           foodLogo="https://b.zmtcdn.com/data/pictures/3/18826243/d422a41eca24ea574443bbf680875d66_o2_featured_v2.jpg"
@@ -71,6 +97,41 @@ const Body = () => {
           cuisine="Middle Eastern ,South Indian"
           price="250"
           time="24"
+        />
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/pictures/1/19162071/a65ffbf44accdb75c6cb41a78b97596e_o2_featured_v2.jpg"
+          resName="RayalaseemaRuchulu"
+          rating="4.1"
+          cuisine="Biriyani, North Indian, South Indian"
+          price="100"
+          time="25"
+        />
+
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/pictures/9/19942799/e5afca14c42e1104b5f9f1eb64d52b2f_o2_featured_v2.jpg?output-format=webp"
+          resName="The biryani life"
+          rating="3.4"
+          cuisine="Biryani, Mughal Biryani"
+          price="200"
+          time="59"
+        />
+
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/pictures/4/19942774/1a49b55dc1f6734bf1fb5885aaafe183_o2_featured_v2.jpg?output-format=webp"
+          resName="Behrouz biryani"
+          rating="3.6"
+          cuisine="Biryani, kebab"
+          price="300"
+          time="58"
+        />
+
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/dish_photos/2c5/110c67132f62f7616b2f706c8994f2c5.jpeg?output-format=webp"
+          resName="Lunchbox"
+          rating="4.1"
+          cuisine="North Indian"
+          price="150"
+          time="58"
         />
       </div>
     </div>

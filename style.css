@@ -1,48 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+}
+
 .header {
+  width: 100%;
+  background-color: white;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1100px;
+  height: 90px;
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
-  border: 1px black dotted;
-  padding: 20px;
-  box-shadow: 5px 5px 10px gray;
+  align-items: center;
+
+  gap: 30px;
 }
 
-.logo {
-  height: 100px;
-  width: 200px;
-  padding: 10px;
-  margin: 10px;
-  box-shadow: 5px 5px 10px black;
+.nav-logo {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 
-.nav-items > ul {
+.search-container {
+  height: 56px;
+  width: 700px;
   display: flex;
-  list-style-type: none;
+  align-items: center;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  box-shadow: 0 2px rgba(0, 0, 0, 0.08);
+
+  background-color: white;
 }
 
-.nav-items > ul > li {
-  padding: 15px;
-  font-size: 2rem;
+.location-box {
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  gap: 10px;
+
+  min-width: 290px;
 }
 
-.search {
-  padding: 10px;
+.location-icon {
+  font-size: 22px;
+  color: #ef4f5f;
 }
 
-.res-container{
+.location-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+  color: #555;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #ddd;
+}
+
+.search-box {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 12px;
+}
+
+.search-icon {
+  font-size: 28px;
+  color: #777;
+}
+
+.search-box {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #888;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+}
+
+.auth-links a {
+  text-decoration: none;
+
+  color: #555;
+
+  font-size: 17px;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.auth-links a:hover {
+  color: #000;
+}
+
+.res-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px 5px;
 }
 
 .res-card {
   margin: 5px;
   width: 420px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .res-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .res-logo-container {
