@@ -23,34 +23,29 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="res-card">
       <div className="res-logo-container">
-        <img src="https://b.zmtcdn.com/data/pictures/1/22643711/82da6b55d89313f00260f02f1f2c5a55_o2_featured_v2.jpg" />
+        <img src={props.foodLogo} />
       </div>
       {/* res-Info */}
 
       <div className="res-Info">
         <div className="restaurant-name-row">
-          <h3>Aalaya Pure Veg</h3>
+          <h3>{props.resName}</h3>
 
-          <span className="rating">4.1 ⭐</span>
+          <span className="rating">{props.rating}⭐</span>
         </div>
 
         <div className="details-row">
-          <span className="cuisine">
-            South Indian
-          </span>
+          <span className="cuisine">{props.cuisine}</span>
 
-          <span className="price">
-            ₹ 200 for one
-          </span>
+          <span className="price">₹ {props.price} for one</span>
         </div>
 
-        <div className="time">
-            19 min
-        </div>
+        <div className="time">{props.time} min</div>
       </div>
     </div>
   );
@@ -61,7 +56,22 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard />
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/pictures/3/18826243/d422a41eca24ea574443bbf680875d66_o2_featured_v2.jpg"
+          resName="Hotel Riyaz"
+          rating="3.8"
+          cuisine="Biriyani, kebab"
+          price="150"
+          time="29"
+        />
+        <RestaurantCard
+          foodLogo="https://b.zmtcdn.com/data/pictures/8/21772208/81389ebffc03243769353ada46c5666f_o2_featured_v2.jpg"
+          resName="Raju Gari Kodi Pulao"
+          rating="4.0"
+          cuisine="Middle Eastern ,South Indian"
+          price="250"
+          time="24"
+        />
       </div>
     </div>
   );
